@@ -75,9 +75,6 @@ gulp.task('browserify', function () {
         return srcArray.map(function (sourceStr) {
             // Удаляю расширение .js
             var filename = sourceStr.split('/').pop().slice(0, -3);
-
-            console.log(srcPath);
-            console.log(filename);
             var bundler = watchify(browserify(sourceStr, {
                 debug: true,
                 cache: {},
@@ -88,7 +85,7 @@ gulp.task('browserify', function () {
             function rebundle() {
                 bundler.bundle().on('error', handleError)
                     .pipe(sourceStream(filename + ".Bundle.js"))
-                    .pipe($.streamify($.uglify().on('error', handleError)))
+                  //  .pipe($.streamify($.uglify().on('error', handleError)))
                     .pipe(gulp.dest(config.outPath + config.appPath + 'js/Bundle'))
                     .pipe(liveReload({stream: true}));
             }

@@ -3,16 +3,15 @@
 
 .drag-n-drop-zone {
   width: 70%;
+  padding: 60px 30px;
 
   @include text_shadow(2);
 
-  &_active,&:hover {
-    padding: 50px 30px;
+  &_active,
+  &:hover {
+
     border-radius: 10px;
     border: 2px dashed $text-color;
-  }
-
-  &:hover {
     color: $dark-primary-color;
     background-color: $light-primary-color;
 
@@ -20,7 +19,7 @@
       border-color: $dark-primary-color;
     }
   }
-  
+
   &__input {
     border-bottom: 1px dashed $text-color;
 
