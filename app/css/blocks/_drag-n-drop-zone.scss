@@ -11,14 +11,15 @@
     &_active,
     &:hover
     {
-        color: $dark-primary-color;
+        color: $text-color;
         border: 2px dashed $text-color;
         border-radius: 10px;
-        background-color: $light-primary-color;
+        background-color: $primary-color;
 
         .drag-n-drop-zone__input
         {
-            border-color: $dark-primary-color;
+            border-color: $text-color;
+            color: $text-color;
         }
     }
 

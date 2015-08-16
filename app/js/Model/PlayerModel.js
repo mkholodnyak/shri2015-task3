@@ -1,6 +1,7 @@
 let _ = require('underscore'),
     Backbone = require('Backbone'),
-    BufferLoader = require('./../Helper/BufferLoader.js');
+    BufferLoader = require('./../Helper/BufferLoader.js'),
+    Visualizer = require('./../Helper/Visualizer.js');
 
 let PlayerModel = Backbone.Model.extend({
     defaults: {
@@ -151,9 +152,12 @@ let PlayerModel = Backbone.Model.extend({
     },
 
     prepareSource: function () {
+        this.visualizer = new Visualizer(this.context);
         this.source = this.context.createBufferSource();
         this.source.buffer = this.buffer;
         this.source.connect(this.context.destination);
+        this.source.connect(this.visualizer.analyser);
+        this.visualizer.draw();
     }
 });
 

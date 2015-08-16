@@ -17,6 +17,13 @@
         background-color: $dark-primary-color;
     }
 
+    &__cover {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left:0;
+    }
+
     &__visualization
     {
         box-sizing: border-box;
