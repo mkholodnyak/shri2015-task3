@@ -27,7 +27,6 @@ let PlayerModel = Backbone.Model.extend({
             this.context, url, self.start.bind(self)
         );
 
-
         bufferLoader.load();
     },
 
@@ -47,11 +46,15 @@ let PlayerModel = Backbone.Model.extend({
             this.source = null;
         }
 
+
         this.stopInterval();
         this.set('trackTitle', 'No track');
         this.buffer = null;
         this.setTime(0);
         this.set('playing', false);
+        if (this.visualizer) {
+            this.visualizer.clean();
+        }
         Backbone.trigger('player:player:progress', this.getProgress());
     },
 

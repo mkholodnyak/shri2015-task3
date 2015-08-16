@@ -20,8 +20,7 @@ var Visualizer = function (context) {
 Visualizer.prototype.draw = function () {
     this.analyser.getByteTimeDomainData(this.data);
 
-    this.context.fillStyle = 'rgb(0,150, 136)';
-    this.context.fillRect(0, 0, this.width, this.height);
+    this.drawPane();
 
     this.context.lineWidth = 2;
     this.context.strokeStyle = 'rgb(255, 255, 255)';
@@ -45,9 +44,18 @@ Visualizer.prototype.draw = function () {
         x += sliceWidth;
     }
 
-    this.context.lineTo(400, 400);
+    this.context.lineTo(410, 400);
     this.context.stroke();
     requestAnimationFrame(this.draw.bind(this));
+};
+
+Visualizer.prototype.clean = function() {
+  this.drawPane();
+};
+
+Visualizer.prototype.drawPane = function() {
+    this.context.fillStyle = 'rgb(0,150, 136)';
+    this.context.fillRect(0, 0, this.width, this.height);
 };
 
 module.exports = Visualizer;

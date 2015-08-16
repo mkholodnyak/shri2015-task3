@@ -12,6 +12,8 @@
 
     &__header
     {
+        z-index: 1;
+
         height: 25px;
 
         background-color: $dark-primary-color;
@@ -19,7 +21,7 @@
 
     &__cover {
         position: absolute;
-        z-index: 0;
+
         top: 0;
         left:0;
     }

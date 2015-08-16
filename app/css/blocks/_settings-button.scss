@@ -17,10 +17,10 @@
     outline: none;
     background-color: transparent;
 
-    @include text_shadow(3);
+    @include text_shadow(2);
 
     &:active
     {
-        @include text_shadow(2);
+        @include text_shadow(1);
     }
 }
