@@ -25,14 +25,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-settings:before {
-  content: "\e600";
+.icon-album:before {
+  content: "\e606";
 }
 .icon-pause:before {
   content: "\e601";
 }
 .icon-play:before {
   content: "\e602";
+}
+.icon-settings:before {
+  content: "\e600";
 }
 .icon-stop:before {
   content: "\e603";

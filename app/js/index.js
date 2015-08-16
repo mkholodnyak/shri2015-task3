@@ -2,8 +2,9 @@ let $ = require('jQuery');
 
 let UploadFormView = require('./View/UploadFormView.js'),
     PlayerView = require('./View/PlayerView.js'),
-    PlayerModel = require('./Model/PlayerModel.js');
-
+    ProgressView = require('./View/ProgressView.js'),
+    PlayerModel = require('./Model/PlayerModel.js'),
+    ProgressModel = require('./Model/ProgressModel.js');
 
 var uploadForm = new UploadFormView({
     el: document.getElementById('js-upload-form'),
@@ -13,10 +14,20 @@ var uploadForm = new UploadFormView({
 var player = new PlayerView({
     el: document.getElementById('js-player'),
     model: new PlayerModel(),
-    trackTitleClass: '#js-track-title'
+    trackTitleSelector: '#js-track-title',
+    playButtonSelector: '#js-play-button',
+    playButtonStateSelectors: {
+        play: 'icon-play',
+        pause: 'icon-pause'
+    }
 });
 
-$('*').on('dragover dragenter dragleave drop', function (e) {
+var progressBar = new ProgressView({
+    el: document.getElementById('js-progress'),
+    model: new ProgressModel()
+});
+
+$('.player').on('dragover dragenter dragleave drop', function (e) {
     e.preventDefault();
     e.stopPropagation();
 });

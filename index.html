@@ -19,20 +19,20 @@
                     <input id="#audio-input" type="file" accept="audio/*"/>
                     </label>
                     <span>  файл на компьютере или перетащите его сюда.</span>
-
                 </form>
+                <i class="visualization__logo icon-album"></i>
             </div>
         </main>
         <div class="player__controls control-panel">
-            <div class="control-panel__title" id="js-track-title">Track</div>
+            <div class="control-panel__title" id="js-track-title">No track</div>
             <div class="control-panel__progress">
-                <progress class="progress" max="100" value="25"></progress>
+                <progress class="progress" max="100" value="0" id="js-progress"></progress>
             </div>
             <div class="control-panel__play-button">
-                <button class="play-pause-button icon-play"></button>
+                <button class="play-pause-button icon-pause icon-play" id="js-play-button"></button>
             </div>
             <div class="control-panel__settings-button">
-                <button class="settings-button icon-settings"></button>
+                <button class="settings-button icon-settings" id="js-settings-button"></button>
             </div>
         </div>
     </div>

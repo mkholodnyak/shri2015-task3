@@ -7,10 +7,37 @@
   color: $text-color;
   background-color: $primary-color;
 
+  &__logo {
+    position: absolute;
+
+    font-size: 150px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: floating 3s infinite;
+  }
+
   &__drop-zone {
     position: absolute;
-    top:40%;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+
+
+  }
+}
+
+
+@keyframes floating {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, -55%);
+  }
+
+  100% {
     transform: translate(-50%, -50%);
   }
 }
