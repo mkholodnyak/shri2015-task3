@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>WebAudioPlayer — ШРИ Яндекса</title>
     <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="app/css/main.css"/>
 </head>
 <body>
 <div class="wrapper">
-    <div class="player">
+    <div class="wrapper__content player">
         <div class="player__visualization">
-            <form action="" class="drag-n-drop-zone">
-                <label for="#audio-input">Выберите файл на компьютере</label>
-                <input class="drag-n-drop-zone__input" id="#audio-input" type="file" accept="audio/*"/>
-                <span>или перетащите их сюда.</span>
-            </form>
+            <div class="visualization">
+                <form action="" class="visualization__drop-zone drag-n-drop-zone">
+                    <label class="drag-n-drop-zone__input" for="#audio-input">Выберите
+                    <input id="#audio-input" type="file" accept="audio/*"/>
+                    </label>
+                    <span>  файл на компьютере или перетащите их сюда.</span>
+
+                </form>
+            </div>
         </div>
         <div class="player__controls control-panel">
-            <div class="control-panel__title">Исполяющий исполнитель</div>
-            <progress class="control-panel__progress"></progress>
-            <button class="control-panel__play-button"></button>
-            <button class="control-panel__settings-button"></button>
+            <div class="control-panel__title">Track</div>
+            <div class="control-panel__progress">
+                <progress class="progress" max="100" value="25"></progress>
+            </div>
+            <div class="control-panel__play-button">
+                <button class="play-pause-button icon-play"></button>
+            </div>
+            <div class="control-panel__settings-button">
+                <button class="settings-button icon-settings"></button>
+            </div>
         </div>
     </div>
 </div>
