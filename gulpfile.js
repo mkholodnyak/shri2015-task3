@@ -12,7 +12,7 @@ var config = {
 
 gulp.task('default', ['start-livereload-server', 'build-files']);
 
-gulp.task('build-files', ['html', 'css', 'image']);
+gulp.task('build-files', ['html', 'css', 'image', 'font']);
 
 gulp.task('start-livereload-server', function () {
     browserSync.init({
@@ -21,6 +21,7 @@ gulp.task('start-livereload-server', function () {
 
     gulp.watch('*.html', ['html']);
     gulp.watch(config.appPath + '/css/**/*.scss', ['css']);
+    gulp.watch(config.appPath + 'fonts/**/*{.eot,.svg,.ttf,.woff}', ['font']);
 });
 
 
@@ -38,6 +39,12 @@ gulp.task('css', function () {
         .pipe($.autoprefixer())
         .pipe($.minifyCss())
         .pipe(gulp.dest(config.outPath + config.appPath + 'css'))
+        .pipe(liveReload({stream: true}));
+});
+
+gulp.task('font', function () {
+    gulp.src(config.appPath + 'fonts/**/*{.eot,.svg,.ttf,.woff}')
+        .pipe(gulp.dest(config.outPath + config.appPath + 'fonts'))
         .pipe(liveReload({stream: true}));
 });
 
