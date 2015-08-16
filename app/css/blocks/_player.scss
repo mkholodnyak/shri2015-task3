@@ -6,8 +6,14 @@
   height: 600px;
   position: relative;
   @include shadow(3);
-
+  
+  &__header {
+    height:25px;
+    background-color: $dark-primary-color;
+  }
+  
   &__visualization {
+    box-sizing: border-box;
     height: 600px;
     width: 100%;
   }

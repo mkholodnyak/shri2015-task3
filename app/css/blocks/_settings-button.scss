@@ -17,9 +17,9 @@
   font-size: 36px;
   background-color: transparent;
 
-  @include text_shadow(2);
+  @include text_shadow(3);
 
   &:active {
-    @include text_shadow(1);
+    @include text_shadow(2);
   }
 }
