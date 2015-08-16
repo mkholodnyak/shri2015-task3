@@ -1,31 +1,38 @@
-@import "../variables";
-@import "../helpers";
+@import '../variables';
+@import '../helpers';
 
-.player {
-  width: 400px;
-  height: 600px;
-  position: relative;
-  @include shadow(3);
-  
-  &__header {
-    height:25px;
-    background-color: $dark-primary-color;
-  }
-  
-  &__visualization {
-    box-sizing: border-box;
+.player
+{
+    position: relative;
+
+    width: 400px;
     height: 600px;
-    width: 100%;
-  }
 
-  &__controls {
-    position: absolute;
+    @include shadow(3);
 
-    top: 450px;
-    left: 50%;
-    transform: translateX(-50%);
+    &__header
+    {
+        height: 25px;
 
-    height: 115px;
-    width: 350px;
-  }
+        background-color: $dark-primary-color;
+    }
+
+    &__visualization
+    {
+        box-sizing: border-box;
+        width: 100%;
+        height: 600px;
+    }
+
+    &__controls
+    {
+        position: absolute;
+        top: 450px;
+        left: 50%;
+
+        width: 350px;
+        height: 115px;
+
+        transform: translateX(-50%);
+    }
 }

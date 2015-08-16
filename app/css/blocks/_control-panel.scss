@@ -1,52 +1,56 @@
-@import "../variables";
-@import "../helpers";
+@import '../variables';
+@import '../helpers';
 
-.control-panel {
-  min-height: 100px;
-  position: relative;
+.control-panel
+{
+    position: relative;
 
-  border-radius: 5px;
+    min-height: 100px;
 
-  border: 1px solid $primary-color;
-  background-color: $text-color;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    background-color: $text-color;
 
-  @include shadow(1);
+    @include shadow(1);
 
-  &__title {
-    position: absolute;
-    @include text_shadow(2);
-    top: -30px;
-    color: $text-color
-  }
+    &__title
+    {
+        position: absolute;
+        top: -30px;
 
-  &__progress {
-    display: block;
+        color: $text-color;
 
-    width: 325px;
-    height: 5px;
+        @include text_shadow(2);
+    }
 
-    margin: 10px auto;
-    padding: 0;
-  }
+    &__progress
+    {
+        display: block;
 
-  &__play-button {
-    position: absolute;
+        width: 325px;
+        height: 5px;
+        margin: 10px auto;
+        padding: 0;
+    }
 
-    top: 60%;
-    left: 50%;
+    &__play-button
+    {
+        position: absolute;
+        top: 60%;
+        left: 50%;
 
-    transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
 
-    height: 60px;
-    width: 60px;
-  }
+        transform: translate(-50%, -50%);
+    }
 
-  &__settings-button {
-    position: absolute;
+    &__settings-button
+    {
+        position: absolute;
+        top: 60%;
+        right: 0;
 
-    right: 0;
-    top: 60%;
-
-    transform: translateY(-50%);
-  }
+        transform: translateY(-50%);
+    }
 }

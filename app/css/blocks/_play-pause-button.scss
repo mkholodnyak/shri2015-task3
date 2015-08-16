@@ -1,26 +1,27 @@
-@import "../variables";
-@import "../helpers";
+@import '../variables';
+@import '../helpers';
 
-.play-pause-button {
-  height: 100%;
-  width: 100%;
+.play-pause-button
+{
+    font-size: 48px;
 
-  min-height: 60px;
-  min-width: 60px;
+    width: 100%;
+    min-width: 60px;
+    height: 100%;
+    min-height: 60px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  border-radius: 50%;
-  border: none;
-  outline: none;
+    color: $text-color;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: $accent-color;
 
-  @include shadow(2);
+    @include shadow(2);
 
-  color: $text-color;
-  font-size: 48px;
-  background-color: $accent-color;
-
-  &:active {
-    @include shadow(1);
-  }
+    &:active
+    {
+        @include shadow(1);
+    }
 }

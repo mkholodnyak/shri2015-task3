@@ -1,48 +1,60 @@
 // Файл создан автоматически
 
-@font-face {
-  font-family: 'icomoon';
-  src:url('../../app/fonts/icomoon.eot?h6xerw');
-  src:url('../../app/fonts/icomoon.eot?#iefixh6xerw') format('embedded-opentype'),
-  url('../../app/fonts/icomoon.ttf?h6xerw') format('truetype'),
-  url('../../app/fonts/icomoon.woff?h6xerw') format('woff'),
-  url('../../app/fonts/icomoon.svg?h6xerw#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@font-face
+{
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../../app/fonts/icomoon.eot?h6xerw');
+    src: url('../../app/fonts/icomoon.eot?#iefixh6xerw') format('embedded-opentype'),
+    url('../../app/fonts/icomoon.ttf?h6xerw') format('truetype'),
+    url('../../app/fonts/icomoon.woff?h6xerw') format('woff'),
+    url('../../app/fonts/icomoon.svg?h6xerw#icomoon') format('svg');
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+[class^='icon-'],
+[class*=' icon-']
+{
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    text-transform: none;
+
+    speak: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-album:before {
-  content: "\e606";
+.icon-album:before
+{
+    content: '\e606';
 }
-.icon-pause:before {
-  content: "\e601";
+.icon-pause:before
+{
+    content: '\e601';
 }
-.icon-play:before {
-  content: "\e602";
+.icon-play:before
+{
+    content: '\e602';
 }
-.icon-settings:before {
-  content: "\e600";
+.icon-settings:before
+{
+    content: '\e600';
 }
-.icon-stop:before {
-  content: "\e603";
+.icon-stop:before
+{
+    content: '\e603';
 }
-.icon-volume-down:before {
-  content: "\e604";
+.icon-volume-down:before
+{
+    content: '\e604';
 }
-.icon-volume-off:before {
-  content: "\e605";
+.icon-volume-off:before
+{
+    content: '\e605';
 }

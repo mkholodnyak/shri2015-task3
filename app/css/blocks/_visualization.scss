@@ -1,43 +1,52 @@
-@import "../variables";
+@import '../variables';
 
-.visualization {
-  min-height: 600px;
-  width: 100%;
-  position: relative;
-  color: $text-color;
-  background-color: $primary-color;
+.visualization
+{
+    position: relative;
 
-  &__logo {
-    position: absolute;
+    width: 100%;
+    min-height: 600px;
 
-    font-size: 150px;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: floating 3s infinite;
-  }
+    color: $text-color;
+    background-color: $primary-color;
 
-  &__drop-zone {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    &__logo
+    {
+        font-size: 150px;
 
+        position: absolute;
+        top: 20%;
+        left: 50%;
 
-  }
+        transform: translate(-50%, -50%);
+        animation: floating 3s infinite;
+    }
+
+    &__drop-zone
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
 }
 
 
-@keyframes floating {
-  0% {
-    transform: translate(-50%, -50%);
-  }
+@keyframes floating
+{
+    0%
+    {
+        transform: translate(-50%, -50%);
+    }
 
-  50% {
-    transform: translate(-50%, -55%);
-  }
+    50%
+    {
+        transform: translate(-50%, -55%);
+    }
 
-  100% {
-    transform: translate(-50%, -50%);
-  }
+    100%
+    {
+        transform: translate(-50%, -50%);
+    }
 }
