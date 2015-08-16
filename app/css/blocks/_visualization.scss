@@ -1,0 +1,17 @@
+@import "../variables";
+
+.visualization {
+  min-height: 600px;
+  width: 100%;
+  position: relative;
+  border: 1px solid $primary-color;
+  color: $text-color;
+  background-color: $primary-color;
+
+  &__drop-zone {
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

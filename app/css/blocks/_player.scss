@@ -1,9 +1,25 @@
-.player {
-  &__visualization {
+@import "../variables";
+@import "../helpers";
 
+.player {
+  width: 400px;
+  height: 600px;
+  position: relative;
+  @include shadow(3);
+
+  &__visualization {
+    height: 600px;
+    width: 100%;
   }
 
   &__controls {
+    position: absolute;
 
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 115px;
+    width: 350px;
   }
 }

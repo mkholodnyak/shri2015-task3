@@ -1,6 +1,38 @@
-.drag-n-drop-zone {
-  &__input {
+@import "../variables";
+@import "../helpers";
 
+.drag-n-drop-zone {
+  width: 70%;
+
+  @include text_shadow(2);
+
+  &_active,&:hover {
+    padding: 50px 30px;
+    border-radius: 10px;
+    border: 2px dashed $text-color;
+  }
+
+  &:hover {
+    color: $dark-primary-color;
+    background-color: $light-primary-color;
+
+    .drag-n-drop-zone__input {
+      border-color: $dark-primary-color;
+    }
+  }
+  
+  &__input {
+    border-bottom: 1px dashed $text-color;
+
+    cursor: pointer;
+    &:hover {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+
+    input {
+      display: none;
+    }
   }
 }
 

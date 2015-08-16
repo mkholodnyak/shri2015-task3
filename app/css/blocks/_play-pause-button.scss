@@ -1,0 +1,26 @@
+@import "../variables";
+@import "../helpers";
+
+.play-pause-button {
+  height: 100%;
+  width: 100%;
+
+  min-height: 60px;
+  min-width: 60px;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+  border: none;
+  outline: none;
+
+  @include shadow(2);
+
+  color: $text-color;
+  font-size: 48px;
+  background-color: $accent-color;
+
+  &:active {
+    @include shadow(1);
+  }
+}

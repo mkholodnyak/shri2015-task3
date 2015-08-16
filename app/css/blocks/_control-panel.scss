@@ -1,17 +1,52 @@
-.control-panel {
-  &__title {
+@import "../variables";
+@import "../helpers";
 
+.control-panel {
+  min-height: 100px;
+  position: relative;
+
+  border-radius: 5px;
+
+  border: 1px solid $primary-color;
+  background-color: $text-color;
+
+  @include shadow(1);
+
+  &__title {
+    position: absolute;
+    @include text_shadow(2);
+    top: -30px;
+    color: $text-color
   }
 
   &__progress {
+    display: block;
 
+    width: 325px;
+    height: 5px;
+
+    margin: 10px auto;
+    padding: 0;
   }
 
   &__play-button {
+    position: absolute;
 
+    top: 60%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    height: 60px;
+    width: 60px;
   }
 
   &__settings-button {
+    position: absolute;
 
+    right: 0;
+    top: 60%;
+
+    transform: translateY(-50%);
   }
 }

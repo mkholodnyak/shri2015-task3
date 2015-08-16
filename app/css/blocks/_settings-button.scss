@@ -1,0 +1,25 @@
+@import "../variables";
+@import "../helpers";
+
+.settings-button {
+  height: 100%;
+  width: 100%;
+
+  cursor: pointer;
+
+  min-height: 30px;
+  min-width: 30px;
+
+  border: none;
+  outline: none;
+
+  color: $accent-color;
+  font-size: 36px;
+  background-color: transparent;
+
+  @include text_shadow(2);
+
+  &:active {
+    @include text_shadow(1);
+  }
+}
