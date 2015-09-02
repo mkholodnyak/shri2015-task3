@@ -3,12 +3,17 @@ let $ = require('jQuery');
 let UploadFormView = require('./View/UploadFormView.js'),
     PlayerView = require('./View/PlayerView.js'),
     ProgressView = require('./View/ProgressView.js'),
+    VisualizationPaneView = require('./View/VisualizationPaneView.js'),
     PlayerModel = require('./Model/PlayerModel.js'),
     ProgressModel = require('./Model/ProgressModel.js');
 
 var uploadForm = new UploadFormView({
     el: document.getElementById('js-upload-form'),
     highlightClass: 'drag-n-drop-zone_active'
+});
+
+var visualizationPane = new VisualizationPaneView({
+    el: document.getElementById('js-visualization')
 });
 
 var player = new PlayerView({
